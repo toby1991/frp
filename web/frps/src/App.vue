@@ -6,7 +6,7 @@
             </el-row>
         </header>
         <section>
-            <el-row :gutter="20">
+            <el-row>
                 <el-col id="side-nav" :xs="24" :md="4">
                     <el-menu default-active="1" mode="vertical" theme="light" router="false" @select="handleSelect">
                         <el-menu-item index="/">Overview</el-menu-item>
@@ -16,6 +16,7 @@
                             <el-menu-item index="/proxies/udp">UDP</el-menu-item>
                             <el-menu-item index="/proxies/http">HTTP</el-menu-item>
                             <el-menu-item index="/proxies/https">HTTPS</el-menu-item>
+                            <el-menu-item index="/proxies/stcp">STCP</el-menu-item>
                         </el-submenu>
                         <el-menu-item index="">Help</el-menu-item>
                     </el-menu>
@@ -37,7 +38,7 @@
         methods: {
             handleSelect(key, path) {
                 if (key == '') {
-                    window.open("http://github.com/fatedier/frp")
+                    window.open("https://github.com/fatedier/frp")
                 }
             }
         }
@@ -48,6 +49,7 @@
     body {
         background-color: #fafafa;
         margin: 0px;
+        font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,sans-serif;
     }
     
     header {
